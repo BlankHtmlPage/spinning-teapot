@@ -25,7 +25,7 @@ fn main() {
 
     let (_stream, stream_handle) = OutputStream::try_default().unwrap();
     // Create a source from the audio bytes
-    let source = rodio::Decoder::new(Cursor::new(include_bytes!("../funkytown.mp3"))).unwrap();
+    let source = rodio::Decoder::new(Cursor::new(include_bytes!("../firstinformational.mp3"))).unwrap();
 
     let _ = stream_handle.play_raw(source.repeat_infinite().convert_samples());
     
